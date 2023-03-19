@@ -1,0 +1,7 @@
+{
+  "name": "healthark-mobile-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}
