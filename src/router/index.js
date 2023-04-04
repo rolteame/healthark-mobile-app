@@ -1,21 +1,28 @@
-import { createRouter, createWebHistory } from '@ionic/vue-router';
-import HomePage from '../views/HomePage.vue'
+import { createRouter, createWebHistory } from "@ionic/vue-router";
+import LoginPage from "../views/LoginPage.vue";
 
 const routes = [
   {
-    path: '/',
-    redirect: '/home'
+    path: "/",
+    redirect: "/login",
   },
   {
-    path: '/home',
-    name: 'Home',
-    component: HomePage
-  }
-]
+    path: "/login",
+    name: "login",
+    component: LoginPage,
+  },
+  // {
+  //   path: "/welcome",
+  //   name: "welcome",
+  //   component: () =>
+  //     import(/* webpackChunkName: "about" */ "../views/WelcomePage.vue"),
+  //   meta: { title: "Healthark App | Welcome" },
+  // },
+];
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
-  routes
-})
+  routes,
+});
 
-export default router
+export default router;
