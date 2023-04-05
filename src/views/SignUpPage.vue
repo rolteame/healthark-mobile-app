@@ -1,36 +1,40 @@
 <template>
   <ion-page>
     <ion-content>
-      <section id="login-section">
-        <div class="login-wrapper">
-          <h2>Welcome to the Ark!</h2>
+      <section id="signup-section">
+        <div class="signup-wrapper">
+          <h2>Sign Up</h2>
           <form action="#">
-            <ion-label>Username</ion-label>
+            <ion-label>First name</ion-label>
+            <ion-input placeholder="Enter First name"></ion-input>
+            <ion-label>Last name</ion-label>
+            <ion-input placeholder="Enter Last name"></ion-input>
+            <ion-label>Email</ion-label>
             <ion-input placeholder="Enter Email"></ion-input>
             <ion-label>Password</ion-label>
             <ion-input placeholder="Enter Password"></ion-input>
-            <div class="remember-section">
-              <div class="remember">
-                <div class="check">
-                  <ion-checkbox>Themed checkbox</ion-checkbox>
-                  <span class="remember-me-text">Remember Me</span>
-                </div>
-                <div class="forgot-password">
-                  <router-link to="#">Forgot Password?</router-link>
-                </div>
+            <ion-label>Confirm password</ion-label>
+            <ion-input placeholder="Confirm password"></ion-input>
+            <div class="terms-section">
+              <div class="terms">
+                <ion-checkbox labelPlacement="end"> </ion-checkbox> By
+                continuing, you agree with our
+                <router-link to="#" class="terms-condition"
+                  >terms and conditions</router-link
+                >
               </div>
 
-              <ion-button> Login </ion-button>
+              <ion-button> Sign up </ion-button>
             </div>
           </form>
           <span class="account-text"
-            >Don't Have an account?
+            >Already registered?
             <span
-              ><router-link to="#" class="sign-text">SIgn Up</router-link></span
+              ><router-link to="#" class="login-text">Login</router-link></span
             ></span
           >
-          <p class="login-with-text">Or Login with</p>
-          <!-- Social links starts here -->
+          <p class="continue-text">Or continue with</p>
+          <!-- Social Links starts here -->
           <SocialLinks />
         </div>
       </section>
@@ -77,17 +81,17 @@ ion-content {
   --background: var(--bg-gradient);
   overflow-y: hidden !important;
 }
-#login-section {
+#signup-section {
   min-height: 92vh;
   box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.login-wrapper {
+.signup-wrapper {
   width: 100%;
 }
-.login-wrapper > h2 {
+.signup-wrapper > h2 {
   text-align: center;
   font-size: var(--fs-28);
   color: #fff;
@@ -106,7 +110,7 @@ ion-input {
   color: #697386;
   margin-top: 10px;
 }
-.remember {
+.terms {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -122,14 +126,8 @@ ion-checkbox::part(container) {
   border-radius: 4px;
   background-color: #fff;
 }
-.remember-me-text {
-  margin-left: 8px;
-}
-.forgot-password > * {
-  color: #8ecbf5;
-}
 .account-text,
-.login-with-text {
+.continue-text {
   text-align: center;
   display: block;
 }
@@ -145,36 +143,18 @@ ion-button {
   font-size: 16px;
   font-weight: var(--fw-700);
 }
-.sign-text {
+.login-text {
   font-weight: var(--fw-700);
   text-decoration: underline;
   color: #8ecbf5;
   margin-left: 8px;
   margin-bottom: 18px;
 }
-.social-icons {
-  margin-top: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.terms-condition {
+  color: #8ecbf5;
 }
-.twitter,
-.facebook,
-.google {
-  /* border: 2px solid white; */
-  padding: 7px 8px;
-  border-radius: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(255, 255, 255, 0.5);
-  margin-right: 16px;
-}
-.twitter-icon,
-.fb-icon,
-.google-icon {
-  width: 22px;
-  height: 22px;
-  /* color:; */
+
+.terms-condition {
+  text-decoration: none;
 }
 </style>
