@@ -11,13 +11,24 @@ const routes = [
     name: "login",
     component: LoginPage,
   },
-  // {
-  //   path: "/welcome",
-  //   name: "welcome",
-  //   component: () =>
-  //     import(/* webpackChunkName: "about" */ "../views/WelcomePage.vue"),
-  //   meta: { title: "Healthark App | Welcome" },
-  // },
+  {
+    path: "/signup",
+    name: "signup",
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/SignUpPage.vue"),
+  },
+  {
+    path: "/otpsent",
+    name: "otpsent",
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/OtpSent.vue"),
+  },
+  {
+    path: "/otpverified",
+    name: "otpverified",
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/OtpVerified.vue"),
+  },
 ];
 
 const router = createRouter({
