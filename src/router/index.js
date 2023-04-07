@@ -29,6 +29,18 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/OtpVerified.vue"),
   },
+  {
+    path: "/forgotpassword",
+    name: "forgotpassword",
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/ForgotPasswordPage.vue"),
+  },
+  {
+    path: "/resetlink",
+    name: "resetlink",
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/ResetLinkPage.vue"),
+  },
 ];
 
 const router = createRouter({

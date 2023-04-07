@@ -64,6 +64,7 @@ ion-content {
   font-size: var(--fs-22);
   text-align: center;
   margin-top: 16px;
+  color: #d6d6d6;
 }
 .otp-form > p {
   font-family: var(--ff-satoshi);
