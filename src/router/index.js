@@ -14,32 +14,32 @@ const routes = [
   {
     path: "/signup",
     name: "signup",
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/SignUpPage.vue"),
+    component: () => import("../views/SignUpPage.vue"),
   },
   {
     path: "/otpsent",
     name: "otpsent",
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/OtpSent.vue"),
+    component: () => import("../views/OtpSent.vue"),
   },
   {
     path: "/otpverified",
     name: "otpverified",
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/OtpVerified.vue"),
+    component: () => import("../views/OtpVerified.vue"),
   },
   {
     path: "/forgotpassword",
     name: "forgotpassword",
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/ForgotPasswordPage.vue"),
+    component: () => import("../views/ForgotPasswordPage.vue"),
   },
   {
     path: "/resetlink",
     name: "resetlink",
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/ResetLinkPage.vue"),
+    component: () => import("../views/ResetLinkPage.vue"),
+  },
+  {
+    path: "/plansetup",
+    name: "plansetup",
+    component: () => import("../views/PlanSetupPage.vue"),
   },
 ];
 
