@@ -4,7 +4,7 @@ import LoginPage from "../views/LoginPage.vue";
 const routes = [
   {
     path: "/",
-    redirect: "/login",
+    redirect: "/dashboard",
   },
   {
     path: "/login",
@@ -40,6 +40,11 @@ const routes = [
     path: "/plansetup",
     name: "plansetup",
     component: () => import("../views/PlanSetupPage.vue"),
+  },
+  {
+    path: "/dashboard",
+    name: "dashboard",
+    component: () => import("../views/DashboardPage.vue"),
   },
 ];
 

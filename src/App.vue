@@ -19,6 +19,8 @@ import { IonApp, IonRouterOutlet } from "@ionic/vue";
     rgba(5, 151, 214, 0.282862) 56.91%,
     rgba(1, 174, 242, 0) 107.7%
   );
+  --clr-1: #2b3340;
+  --clr-2: #f2f4f7;
   /* font family */
   --ff-satoshi: "Satoshi", sans-serif;
 
