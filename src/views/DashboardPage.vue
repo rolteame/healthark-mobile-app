@@ -338,11 +338,45 @@
         <div class="health-insurance-card-area">
           <h2>Health Insurance For You</h2>
         </div>
+        <!-- Swiper area starts here -->
+        <swiper
+          class="mySwiper"
+          :slidesPerView="'auto'"
+          :spaceBetween="30"
+          :modules="modules"
+        >
+          <swiper-slide class="swiper-slide">
+            <!-- Health plan small card -->
+            <div class="health-plan-small-logo">
+              <img src="../../public/assets/image/health.png" alt="" />
+            </div>
+            <div class="health-plan-small-card-details">
+              <h2>Rothauge Standard Individual</h2>
+              <p class="p">Rothauge HMO</p>
+              <div class="line"></div>
+              <div class="plan-card">
+                <p class="plan-type">
+                  Plan type: &nbsp;<span>individual</span>
+                </p>
+                <p class="plan-cost">
+                  Plan cost: &nbsp;<span>&#8358;38500/mo</span>
+                </p>
+              </div>
+            </div>
+          </swiper-slide>
+          <swiper-slide class="swiper-slide">Slide 2</swiper-slide
+          ><swiper-slide class="swiper-slide">Slide 3</swiper-slide>
+        </swiper>
+        <small class="swipe">Swipe to left for more</small>
+        <!-- ends here -->
         <div class="search-bar">
           <ion-searchbar
             placeholder="HMOs, address, and health tips"
           ></ion-searchbar>
         </div>
+
+        <h2 class="top-health">Top 10 Health plans for you</h2>
+        <div class="line-2"></div>
       </ion-content>
     </section>
     <!-- </ion-content> -->
@@ -350,6 +384,9 @@
 </template>
 
 <script>
+// Import Swiper Vue.js components
+import { Swiper, SwiperSlide } from "swiper/vue";
+import "swiper/css";
 import {
   IonPage,
   IonContent,
@@ -361,6 +398,7 @@ import {
 } from "@ionic/vue";
 export default {
   components: {
+    // ionic components
     IonPage,
     IonContent,
     IonMenu,
@@ -368,8 +406,13 @@ export default {
     IonToolbar,
     IonSearchbar,
     IonMenuButton,
+    // swiper components
+    Swiper,
+    SwiperSlide,
   },
-  setup() {},
+  setup() {
+    return {};
+  },
 };
 </script>
 
@@ -483,5 +526,96 @@ ion-searchbar {
   --border-radius: 4px;
   width: 100% !important;
   margin: 0 !important;
+}
+
+/* swiper stylings starts here */
+.mySwiper {
+  width: 100%;
+  height: auto;
+}
+
+.swiper-slide {
+  color: black;
+  font-size: 18px;
+  background: transparent;
+  display: flex;
+  padding: 10px;
+  border-radius: 4px;
+  /* min-height: 100px; */
+}
+
+.swiper-slide:nth-child(1) {
+  width: 80%;
+  background-color: var(--clr-3);
+}
+.swiper-slide:nth-child(2) {
+  width: 80%;
+  background-color: var(--clr-4);
+}
+.swiper-slide:nth-child(3) {
+  width: 100%;
+}
+
+/* health logo */
+.health-plan-small-logo {
+  display: flex;
+  align-items: center;
+  width: 70px;
+  /* width: 20%; */
+}
+.health-plan-small-logo img {
+  width: 45px;
+  height: 45px;
+}
+.health-plan-small-card-details {
+  width: 100%;
+}
+.health-plan-small-card-details h2 {
+  font-size: var(--fs-14);
+  font-weight: var(--fw-700);
+  font-family: var(--ff-satoshi);
+  color: #fff;
+}
+.health-plan-small-card-details .p {
+  text-transform: uppercase;
+  font-family: var(--ff-satoshi);
+  font-weight: var(--fw-400);
+  font-size: var(--fs-12);
+  color: #fff;
+}
+.line,
+.line-2 {
+  border-top: 1px solid white;
+}
+.health-plan-small-card-details .plan-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-right: 30px;
+}
+.plan-card .plan-type,
+.plan-card .plan-cost {
+  font-family: var(--ff-satoshi);
+  font-size: var(--fs-10);
+  color: #fff;
+}
+.plan-card .plan-type > span,
+.plan-card .plan-cost > span {
+  font-weight: var(--fw-500);
+}
+.swipe {
+  color: var(--clr-3);
+  text-align: center;
+  display: block;
+  margin-top: 10px;
+}
+.top-health {
+  font-size: var(--fs-16);
+  font-weight: var(--fw-700);
+  color: var(--clr-1);
+}
+.line-2 {
+  border-top: 1px solid #e2e2e2;
 }
 </style>
