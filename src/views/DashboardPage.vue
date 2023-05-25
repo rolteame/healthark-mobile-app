@@ -2,7 +2,7 @@
   <ion-page>
     <!-- Side menu starts here -->
     <ion-menu content-id="main-content">
-      <ion-content class="ion-padding">
+      <ion-content class="ion-padding" scrollEvents="true">
         <div class="username">
           <h2>Hi Sampson!</h2>
         </div>
@@ -304,8 +304,8 @@
         </div>
       </ion-content>
     </ion-menu>
+    <!-- Side menu ends here -->
 
-    <!-- <ion-content class="ion-padding"> -->
     <section class="dashboard-section" id="main-content">
       <ion-header>
         <ion-toolbar>
@@ -333,53 +333,296 @@
           </div>
         </ion-toolbar>
       </ion-header>
-      <ion-content class="ion-padding dashboard">
-        <!-- <h2>hello</h2> -->
-        <div class="health-insurance-card-area">
-          <h2>Health Insurance For You</h2>
-        </div>
-        <!-- Swiper area starts here -->
-        <swiper
-          class="mySwiper"
-          :slidesPerView="'auto'"
-          :spaceBetween="30"
-          :modules="modules"
-        >
-          <swiper-slide class="swiper-slide">
-            <!-- Health plan small card -->
-            <div class="health-plan-small-logo">
-              <img src="../../public/assets/image/health.png" alt="" />
-            </div>
-            <div class="health-plan-small-card-details">
-              <h2>Rothauge Standard Individual</h2>
-              <p class="p">Rothauge HMO</p>
-              <div class="line"></div>
-              <div class="plan-card">
-                <p class="plan-type">
-                  Plan type: &nbsp;<span>individual</span>
-                </p>
-                <p class="plan-cost">
-                  Plan cost: &nbsp;<span>&#8358;38500/mo</span>
-                </p>
+      <ion-content class="ion-padding page-wrapper" scrollEvents="true">
+        <div class="dashboard">
+          <div class="health-insurance-card-area">
+            <h2>Health Insurance For You</h2>
+          </div>
+          <!-- Swiper area starts here -->
+          <swiper class="mySwiper" :slidesPerView="'auto'" :spaceBetween="30">
+            <swiper-slide class="swiper-slide">
+              <!-- Health plan small card -->
+              <div class="health-plan-small-logo">
+                <img src="../../public/assets/image/health.png" alt="" />
+              </div>
+              <div class="health-plan-small-card-details">
+                <h2>Rothauge Standard Individual</h2>
+                <p class="p">Rothauge HMO</p>
+                <div class="line"></div>
+                <div class="plan-card">
+                  <p class="plan-type">
+                    Plan type: &nbsp;<span>Individual</span>
+                  </p>
+                  <p class="plan-cost">
+                    Plan cost: &nbsp;<span>&#8358;38500/mo</span>
+                  </p>
+                </div>
+              </div>
+            </swiper-slide>
+            <swiper-slide class="swiper-slide">Slide 2</swiper-slide
+            ><swiper-slide class="swiper-slide">Slide 3</swiper-slide>
+          </swiper>
+          <div class="swipe">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="ionicon"
+              viewBox="0 0 512 512"
+            >
+              <path
+                fill="none"
+                stroke="#0f5b8f"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="48"
+                d="M244 400L100 256l144-144M120 256h292"
+              />
+            </svg>
+            <span>Swipe to right for more</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="ionicon"
+              viewBox="0 0 512 512"
+            >
+              <path
+                fill="none"
+                stroke="#0f5b8f"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="48"
+                d="M268 112l144 144-144 144M392 256H100"
+              />
+            </svg>
+          </div>
+          <!-- ends here -->
+          <div class="search-bar">
+            <ion-searchbar
+              placeholder="HMOs, address, and health tips"
+            ></ion-searchbar>
+          </div>
+
+          <h2 class="top-health">Top 10 Health plans for you</h2>
+          <div class="line-2"></div>
+
+          <!-- Health Plan Card Area -->
+          <div class="health-plan-card-container">
+            <div class="health-plan-card">
+              <div class="health-plan-card-head">
+                <div class="card-header">
+                  <div class="img-header">
+                    <img src="../../public/assets/image/health.png" alt="" />
+                  </div>
+                  <div class="content-top-header">
+                    <button class="hospitals">
+                      <p>1459 + hospitals</p>
+                    </button>
+                    <div class="save-btn">
+                      <button>
+                        <i class="bi bi-heart"></i> <span>save</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="header">
+                  <h2>Rothauge Standard Individual</h2>
+                  <p>Rothauge Standard Individual</p>
+                </div>
+              </div>
+              <div class="health-plan-card-body">
+                <div class="plan-area">
+                  <div class="top">
+                    <div class="plan-block-one">
+                      <div class="icon">
+                        <img
+                          src="../../public/assets/image/plan_type.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="content">
+                        <span class="label">Plan type</span>
+                        <span class="bold">Individual</span>
+                      </div>
+                    </div>
+                    <div class="plan-block-two">
+                      <div class="icon">
+                        <img
+                          src="../../public/assets/image/surgery.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="content">
+                        <span class="label">Surgery Coverage</span>
+                        <span class="bold">150000 +</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="down">
+                    <div class="plan-block-three">
+                      <div class="icon">
+                        <img
+                          src="../../public/assets/image/ward_type.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="content">
+                        <span class="label">Ward type</span>
+                        <span class="bold">General</span>
+                      </div>
+                    </div>
+                    <div class="plan-block-four">
+                      <div class="icon">
+                        <img
+                          src="../../public/assets/image/plan_cost.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="content">
+                        <span class="label">Plan Cost</span>
+                        <span class="bold">&#8358;38500/mo</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="plan-location">
+                  <h1>Nearby Hospital</h1>
+                  <hr />
+                  <h2>Healthcare International Nigeria</h2>
+                  <p>308a, Murtala Mohammed Way, Yaba, Lagos, Nigeria</p>
+                  <h2>White Chapel Hospital</h2>
+                  <p>140, Obafemi Awolowo Way, Ikeja, Lagos, Nigeria</p>
+                </div>
               </div>
             </div>
-          </swiper-slide>
-          <swiper-slide class="swiper-slide">Slide 2</swiper-slide
-          ><swiper-slide class="swiper-slide">Slide 3</swiper-slide>
-        </swiper>
-        <small class="swipe">Swipe to left for more</small>
-        <!-- ends here -->
-        <div class="search-bar">
-          <ion-searchbar
-            placeholder="HMOs, address, and health tips"
-          ></ion-searchbar>
+            <div class="health-plan-card">
+              <div class="health-plan-card-head">
+                <div class="card-header">
+                  <div class="img-header">
+                    <img src="../../public/assets/image/health.png" alt="" />
+                  </div>
+                  <div class="content-top-header">
+                    <button class="hospitals">
+                      <p>1459 + hospitals</p>
+                    </button>
+                    <div class="save-btn">
+                      <button>
+                        <i class="bi bi-heart"></i> <span>save</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="header">
+                  <h2>Rothauge Standard Individual</h2>
+                  <p>Rothauge Standard Individual</p>
+                </div>
+              </div>
+              <div class="health-plan-card-body">
+                <div class="plan-area">
+                  <div class="top">
+                    <div class="plan-block-one">
+                      <div class="icon">
+                        <img
+                          src="../../public/assets/image/plan_type.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="content">
+                        <span class="label">Plan type</span>
+                        <span class="bold">Individual</span>
+                      </div>
+                    </div>
+                    <div class="plan-block-two">
+                      <div class="icon">
+                        <img
+                          src="../../public/assets/image/surgery.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="content">
+                        <span class="label">Surgery Coverage</span>
+                        <span class="bold">150000 +</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="down">
+                    <div class="plan-block-three">
+                      <div class="icon">
+                        <img
+                          src="../../public/assets/image/ward_type.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="content">
+                        <span class="label">Ward type</span>
+                        <span class="bold">General</span>
+                      </div>
+                    </div>
+                    <div class="plan-block-four">
+                      <div class="icon">
+                        <img
+                          src="../../public/assets/image/plan_cost.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="content">
+                        <span class="label">Plan Cost</span>
+                        <span class="bold">&#8358;38500/mo</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="plan-location">
+                  <h1>Nearby Hospital</h1>
+                  <hr />
+                  <h2>Healthcare International Nigeria</h2>
+                  <p>308a, Murtala Mohammed Way, Yaba, Lagos, Nigeria</p>
+                  <h2>White Chapel Hospital</h2>
+                  <p>140, Obafemi Awolowo Way, Ikeja, Lagos, Nigeria</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-
-        <h2 class="top-health">Top 10 Health plans for you</h2>
-        <div class="line-2"></div>
       </ion-content>
     </section>
-    <!-- </ion-content> -->
+
+    <!-- Tabs starts here -->
+    <div class="tabs-bottom">
+      <ion-tabs>
+        <ion-router-outlet></ion-router-outlet>
+        <ion-tab-bar slot="bottom">
+          <ion-tab-button tab="home" href="#">
+            <!-- <ion-icon :icon="playCircle" /> -->
+            <img src="../../public/assets/image/home_icon.png" />
+            <ion-label>Home</ion-label>
+          </ion-tab-button>
+
+          <ion-tab-button tab="radio" href="#">
+            <!-- <ion-icon :icon="radio" /> -->
+            <img src="../../public/assets/image/explore_icon.png" />
+            <ion-label>Explore</ion-label>
+          </ion-tab-button>
+
+          <ion-tab-button tab="library" href="#">
+            <!-- <ion-icon :icon="library" /> -->
+            <img src="../../public/assets/image/myplan_icon.png" />
+            <ion-label>My Plans</ion-label>
+          </ion-tab-button>
+
+          <ion-tab-button tab="search" href="">
+            <!-- <ion-icon :icon="search" /> -->
+            <img src="../../public/assets/image/healthtips_icon.png" />
+            <ion-label>HealthTips</ion-label>
+          </ion-tab-button>
+
+          <ion-tab-button tab="search" href="">
+            <!-- <ion-icon :icon="search" /> -->
+            <img src="../../public/assets/image/profile_icon.png" />
+            <ion-label>Profile</ion-label>
+          </ion-tab-button>
+        </ion-tab-bar>
+      </ion-tabs>
+    </div>
+
+    <!-- Tabs ends here -->
   </ion-page>
 </template>
 
@@ -395,7 +638,14 @@ import {
   IonToolbar,
   IonSearchbar,
   IonMenuButton,
+  IonRouterOutlet,
+  IonTabs,
+  IonTabBar,
+  IonTabButton,
+  // IonIcon,
+  IonLabel,
 } from "@ionic/vue";
+// import { playCircle, radio, library, search } from "ionicons/icons";
 export default {
   components: {
     // ionic components
@@ -406,12 +656,23 @@ export default {
     IonToolbar,
     IonSearchbar,
     IonMenuButton,
+    IonRouterOutlet,
+    IonTabs,
+    IonTabBar,
+    IonTabButton,
+    // IonIcon,
+    IonLabel,
     // swiper components
     Swiper,
     SwiperSlide,
   },
   setup() {
-    return {};
+    return {
+      // playCircle,
+      // radio,
+      // library,
+      // search,
+    };
   },
 };
 </script>
@@ -427,7 +688,10 @@ ion-toolbar {
 ion-menu-button {
   color: var(--clr-1);
 }
-
+/* ion-content {
+  overflow: scroll !important;
+  border: 2px solid red;
+} */
 /* sidebar styling starts here */
 .username h2 {
   color: var(--clr-1);
@@ -490,9 +754,9 @@ ion-menu-button {
   color: var(--clr-1);
 }
 /* ====================> */
-.dashboard {
-  min-height: 100vh;
+.page-wrapper {
   --background: #fff;
+  height: 600px;
 }
 .dashboard-header {
   display: flex;
@@ -541,16 +805,17 @@ ion-searchbar {
   display: flex;
   padding: 10px;
   border-radius: 4px;
-  /* min-height: 100px; */
 }
 
 .swiper-slide:nth-child(1) {
-  width: 80%;
+  width: 90%;
   background-color: var(--clr-3);
+  margin-right: 0;
 }
 .swiper-slide:nth-child(2) {
   width: 80%;
   background-color: var(--clr-4);
+  margin-left: 0;
 }
 .swiper-slide:nth-child(3) {
   width: 100%;
@@ -606,9 +871,13 @@ ion-searchbar {
 }
 .swipe {
   color: var(--clr-3);
-  text-align: center;
-  display: block;
+  font-family: var(--ff-satoshi);
+  font-weight: var(--fw-400);
+  /* text-align: center; */
+  /* display: block; */
   margin-top: 10px;
+  display: flex;
+  align-items: center;
 }
 .top-health {
   font-size: var(--fs-16);
@@ -617,5 +886,166 @@ ion-searchbar {
 }
 .line-2 {
   border-top: 1px solid #e2e2e2;
+}
+
+/* Health Plan card styling starts here */
+.health-plan-card {
+  box-shadow: var(--card-shadow);
+  margin-top: 20px;
+  border-radius: 4px;
+  background-color: #fff;
+}
+.health-plan-card-head {
+  box-shadow: var(--card-shadow);
+  padding: 20px 8px;
+  background-color: #f2f4f7;
+}
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card-header img {
+  width: 34px;
+  height: 34px;
+}
+
+.content-top-header {
+  display: flex;
+  align-items: center;
+}
+
+.save-btn > button {
+  background-color: #fff;
+  color: var(--clr-1);
+  font-weight: var(--fw-700);
+  font-size: var(--fs-12);
+  display: flex;
+  align-items: center;
+  border: 1px solid #e2e2e2;
+  padding: 12px 13px;
+}
+.save-btn > button,
+.hospitals {
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+.hospitals {
+  background: #f3f8fd;
+  padding: 1px 13px;
+}
+.hospitals > p {
+  font-size: var(--fs-12);
+  font-weight: var(--fw-700);
+  color: var(--clr-3);
+  line-height: 16.2px;
+}
+.save-btn > button > span {
+  margin-left: 4px;
+}
+.header h2,
+.header p {
+  color: var(--clr-1);
+}
+.header h2 {
+  font-size: var(--fs-16);
+  font-weight: var(--fw-700);
+}
+.header p {
+  font-size: var(--fs-14);
+  font-weight: var(--fw-500);
+}
+
+.health-plan-card-body {
+  padding: 20px 8px;
+}
+
+.plan-area > .top,
+.plan-area > .down {
+  display: flex;
+  justify-content: space-between;
+}
+
+.plan-block-one,
+.plan-block-two,
+.plan-block-three,
+.plan-block-four {
+  width: 40%;
+  display: flex;
+}
+.icon {
+  display: flex;
+  align-items: center;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  /* color: red; */
+  margin-left: 15px;
+}
+.content > .label {
+  font-weight: var(--fw-400);
+  font-size: var(--fs-14);
+  color: var(--clr-5);
+}
+.content > .bold {
+  font-weight: var(--fw-700);
+  font-size: var(--fs-14);
+  color: var(--clr-1);
+}
+
+.plan-location {
+  margin-top: 20px;
+}
+.plan-location > h1 {
+  color: var(--clr-1);
+  font-size: 16px;
+  font-weight: var(--fw-500);
+}
+.plan-location > hr {
+  border-top: 1px solid #e2e2e2;
+}
+
+.plan-location > h2 {
+  color: var(--clr-1);
+  font-size: var(--fs-14);
+}
+
+.plan-location > p {
+  color: var(--clr-5);
+  font-size: var(--fs-14);
+}
+
+/* styling for ion tabs starts here */
+ion-tabs {
+  display: flex;
+  position: static !important;
+  flex-direction: column;
+  width: 100%;
+  height: 100% !important;
+  z-index: 0;
+  align-items: stretch;
+}
+.tabs-bottom {
+  height: 64px;
+  position: absolute;
+  z-index: 999;
+  bottom: 0;
+  width: 100%;
+}
+ion-tab-bar {
+  border: none;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background-color: #fff;
+}
+ion-tab-bar,
+ion-tab-button {
+  background-color: #fff;
+}
+ion-tab-button > ion-label {
+  margin-top: 6px;
+  color: var(--clr-5);
+  font-weight: var(--fw-500);
 }
 </style>
