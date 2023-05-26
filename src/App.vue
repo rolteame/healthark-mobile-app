@@ -24,6 +24,7 @@ import { IonApp, IonRouterOutlet } from "@ionic/vue";
   --clr-2: #f2f4f7;
   --clr-3: #0f5b8f;
   --clr-4: #e7eff4;
+  --clr-5: #697386;
   /* font family */
   --ff-satoshi: "Satoshi", sans-serif;
 
@@ -47,6 +48,9 @@ import { IonApp, IonRouterOutlet } from "@ionic/vue";
   --lh-32: 32px;
   --lh-30: 30px;
   --lh-22: 22px;
+
+  /* box shadow */
+  --card-shadow: 0px 0px 8px rgba(105, 115, 134, 0.25);
 }
 
 * {
