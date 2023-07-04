@@ -67,7 +67,6 @@ export default {
 <style scoped>
 * {
   font-family: var(--ff-satoshi) !important;
-  /* font-weight: var(--fw-700) !important; */
 }
 ion-content {
   --padding-top: 20px;
@@ -151,30 +150,5 @@ ion-button {
   color: #8ecbf5;
   margin-left: 8px;
   margin-bottom: 18px;
-}
-.social-icons {
-  margin-top: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.twitter,
-.facebook,
-.google {
-  /* border: 2px solid white; */
-  padding: 7px 8px;
-  border-radius: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(255, 255, 255, 0.5);
-  margin-right: 16px;
-}
-.twitter-icon,
-.fb-icon,
-.google-icon {
-  width: 22px;
-  height: 22px;
-  /* color:; */
 }
 </style>

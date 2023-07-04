@@ -37,7 +37,6 @@ export default {
 <style scoped>
 * {
   font-family: var(--ff-satoshi) !important;
-  /* font-weight: var(--fw-700) !important; */
 }
 ion-content {
   --padding-top: 20px;
@@ -69,7 +68,6 @@ ion-content {
 .otp-form > p {
   font-family: var(--ff-satoshi);
   font-style: normal;
-  /* font-weight: var(--fw-400); */
   color: #d6d6d6;
   font-size: var(--fs-16);
   line-height: var(--lh-22);
@@ -100,10 +98,4 @@ ion-input {
   font-size: var(--fs-16);
   color: #2b3340;
 }
-
-/* font-family: 'Satoshi';
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: 22px; */
 </style>
