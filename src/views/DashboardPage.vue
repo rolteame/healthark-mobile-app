@@ -333,6 +333,7 @@
           </div>
         </ion-toolbar>
       </ion-header>
+
       <ion-content class="ion-padding page-wrapper" scrollEvents="true">
         <div class="dashboard">
           <div class="health-insurance-card-area">
@@ -593,7 +594,52 @@
               </div>
             </div>
           </div>
+
+      <!-- <ion-content class="ion-padding dashboard">
+        <!-- <h2>hello</h2> -->
+        <div class="health-insurance-card-area">
+          <h2>Health Insurance For You</h2>
         </div>
+        <!-- Swiper area starts here -->
+        <swiper
+          class="mySwiper"
+          :slidesPerView="'auto'"
+          :spaceBetween="30"
+          :modules="modules"
+        >
+          <swiper-slide class="swiper-slide">
+            <!-- Health plan small card -->
+            <div class="health-plan-small-logo">
+              <img src="../../public/assets/image/health.png" alt="" />
+            </div>
+            <div class="health-plan-small-card-details">
+              <h2>Rothauge Standard Individual</h2>
+              <p class="p">Rothauge HMO</p>
+              <div class="line"></div>
+              <div class="plan-card">
+                <p class="plan-type">
+                  Plan type: &nbsp;<span>individual</span>
+                </p>
+                <p class="plan-cost">
+                  Plan cost: &nbsp;<span>&#8358;38500/mo</span>
+                </p>
+              </div>
+            </div>
+          </swiper-slide>
+          <swiper-slide class="swiper-slide">Slide 2</swiper-slide
+          ><swiper-slide class="swiper-slide">Slide 3</swiper-slide>
+        </swiper>
+        <small class="swipe">Swipe to left for more</small>
+        <!-- ends here -->
+        <div class="search-bar">
+          <ion-searchbar
+            placeholder="HMOs, address, and health tips"
+          ></ion-searchbar> -->
+
+        </div>
+
+        <h2 class="top-health">Top 10 Health plans for you</h2>
+        <div class="line-2"></div>
       </ion-content>
     </section>
 
@@ -674,7 +720,13 @@ export default {
     SwiperSlide,
   },
   setup() {
-    return {};
+
+    return {
+      // playCircle,
+      // radio,
+      // library,
+      // search,
+    };
   },
 };
 </script>
@@ -803,17 +855,28 @@ ion-searchbar {
   display: flex;
   padding: 10px;
   border-radius: 4px;
+
 }
 
 .swiper-slide:nth-child(1) {
   width: 90%;
   background-color: var(--clr-3);
   margin-right: 0;
+
+  /* min-height: 100px; */
+}
+
+.swiper-slide:nth-child(1) {
+  width: 80%;
+  background-color: var(--clr-3);
+
 }
 .swiper-slide:nth-child(2) {
   width: 80%;
   background-color: var(--clr-4);
+
   margin-left: 0;
+
 }
 .swiper-slide:nth-child(3) {
   width: 100%;
@@ -868,11 +931,17 @@ ion-searchbar {
 }
 .swipe {
   color: var(--clr-3);
+
   font-family: var(--ff-satoshi);
   font-weight: var(--fw-400);
   margin-top: 10px;
   display: flex;
   align-items: center;
+
+  text-align: center;
+  display: block;
+  margin-top: 10px;
+
 }
 .top-health {
   font-size: var(--fs-16);
@@ -882,6 +951,7 @@ ion-searchbar {
 .line-2 {
   border-top: 1px solid #e2e2e2;
 }
+
 
 /* Health Plan card styling starts here */
 .health-plan-card {
@@ -1040,4 +1110,5 @@ ion-tab-button > ion-label {
   color: var(--clr-5);
   font-weight: var(--fw-500);
 }
+
 </style>
