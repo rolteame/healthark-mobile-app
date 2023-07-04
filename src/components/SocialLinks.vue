@@ -54,7 +54,6 @@
 .twitter,
 .facebook,
 .google {
-  /* border: 2px solid white; */
   padding: 7px 8px;
   border-radius: 100%;
   display: flex;
@@ -68,6 +67,5 @@
 .google-icon {
   width: 22px;
   height: 22px;
-  /* color:; */
 }
 </style>

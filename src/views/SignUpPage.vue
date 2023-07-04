@@ -71,7 +71,6 @@ export default {
 <style scoped>
 * {
   font-family: var(--ff-satoshi) !important;
-  /* font-weight: var(--fw-700) !important; */
 }
 ion-content {
   --padding-top: 20px;

@@ -418,7 +418,20 @@
                     </button>
                     <div class="save-btn">
                       <button>
-                        <i class="bi bi-heart"></i> <span>save</span>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="ionicon"
+                          viewBox="0 0 512 512"
+                        >
+                          <path
+                            d="M352.92 80C288 80 256 144 256 144s-32-64-96.92-64c-52.76 0-94.54 44.14-95.08 96.81-1.1 109.33 86.73 187.08 183 252.42a16 16 0 0018 0c96.26-65.34 184.09-143.09 183-252.42-.54-52.67-42.32-96.81-95.08-96.81z"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="32"
+                          /></svg
+                        ><span>save</span>
                       </button>
                     </div>
                   </div>
@@ -636,31 +649,26 @@
         <ion-router-outlet></ion-router-outlet>
         <ion-tab-bar slot="bottom">
           <ion-tab-button tab="home" href="#">
-            <!-- <ion-icon :icon="playCircle" /> -->
             <img src="../../public/assets/image/home_icon.png" />
             <ion-label>Home</ion-label>
           </ion-tab-button>
 
           <ion-tab-button tab="radio" href="#">
-            <!-- <ion-icon :icon="radio" /> -->
             <img src="../../public/assets/image/explore_icon.png" />
             <ion-label>Explore</ion-label>
           </ion-tab-button>
 
           <ion-tab-button tab="library" href="#">
-            <!-- <ion-icon :icon="library" /> -->
             <img src="../../public/assets/image/myplan_icon.png" />
             <ion-label>My Plans</ion-label>
           </ion-tab-button>
 
           <ion-tab-button tab="search" href="">
-            <!-- <ion-icon :icon="search" /> -->
             <img src="../../public/assets/image/healthtips_icon.png" />
             <ion-label>HealthTips</ion-label>
           </ion-tab-button>
 
           <ion-tab-button tab="search" href="">
-            <!-- <ion-icon :icon="search" /> -->
             <img src="../../public/assets/image/profile_icon.png" />
             <ion-label>Profile</ion-label>
           </ion-tab-button>
@@ -691,7 +699,6 @@ import {
   // IonIcon,
   IonLabel,
 } from "@ionic/vue";
-// import { playCircle, radio, library, search } from "ionicons/icons";
 export default {
   components: {
     // ionic components
@@ -720,7 +727,6 @@ export default {
       // library,
       // search,
     };
-
   },
 };
 </script>
@@ -736,10 +742,6 @@ ion-toolbar {
 ion-menu-button {
   color: var(--clr-1);
 }
-/* ion-content {
-  overflow: scroll !important;
-  border: 2px solid red;
-} */
 /* sidebar styling starts here */
 .username h2 {
   color: var(--clr-1);
@@ -885,7 +887,6 @@ ion-searchbar {
   display: flex;
   align-items: center;
   width: 70px;
-  /* width: 20%; */
 }
 .health-plan-small-logo img {
   width: 45px;
@@ -933,8 +934,6 @@ ion-searchbar {
 
   font-family: var(--ff-satoshi);
   font-weight: var(--fw-400);
-  /* text-align: center; */
-  /* display: block; */
   margin-top: 10px;
   display: flex;
   align-items: center;
@@ -1005,9 +1004,6 @@ ion-searchbar {
   font-weight: var(--fw-700);
   color: var(--clr-3);
   line-height: 16.2px;
-}
-.save-btn > button > span {
-  margin-left: 4px;
 }
 .header h2,
 .header p {
