@@ -278,11 +278,7 @@
 
         <!-- logout button -->
         <div class="logout">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="ionicon"
-            viewBox="0 0 512 512"
-          >
+          <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
             <path
               d="M448 256c0-106-86-192-192-192S64 150 64 256s86 192 192 192 192-86 192-192z"
               fill="none"
@@ -316,11 +312,7 @@
               alt=""
               class="logo"
             />
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="ionicon"
-              viewBox="0 0 512 512"
-            >
+            <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
               <path
                 d="M427.68 351.43C402 320 383.87 304 383.87 217.35 383.87 138 343.35 109.73 310 96c-4.43-1.82-8.6-6-9.95-10.55C294.2 65.54 277.8 48 256 48s-38.21 17.55-44 37.47c-1.35 4.6-5.52 8.71-9.95 10.53-33.39 13.75-73.87 41.92-73.87 121.35C128.13 304 110 320 84.32 351.43 73.68 364.45 83 384 101.61 384h308.88c18.51 0 27.77-19.61 17.19-32.57zM320 384v16a64 64 0 01-128 0v-16"
                 fill="none"
@@ -350,12 +342,8 @@
                 <p class="p">Rothauge HMO</p>
                 <div class="line"></div>
                 <div class="plan-card">
-                  <p class="plan-type">
-                    Plan type: &nbsp;<span>Individual</span>
-                  </p>
-                  <p class="plan-cost">
-                    Plan cost: &nbsp;<span>&#8358;38500/mo</span>
-                  </p>
+                  <p class="plan-type">Plan type: &nbsp;<span>Individual</span></p>
+                  <p class="plan-cost">Plan cost: &nbsp;<span>&#8358;38500/mo</span></p>
                 </div>
               </div>
             </swiper-slide>
@@ -363,11 +351,7 @@
             ><swiper-slide class="swiper-slide">Slide 3</swiper-slide>
           </swiper>
           <div class="swipe">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="ionicon"
-              viewBox="0 0 512 512"
-            >
+            <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
               <path
                 fill="none"
                 stroke="#0f5b8f"
@@ -378,11 +362,7 @@
               />
             </svg>
             <span>Swipe to right for more</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="ionicon"
-              viewBox="0 0 512 512"
-            >
+            <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
               <path
                 fill="none"
                 stroke="#0f5b8f"
@@ -395,9 +375,7 @@
           </div>
           <!-- ends here -->
           <div class="search-bar">
-            <ion-searchbar
-              placeholder="HMOs, address, and health tips"
-            ></ion-searchbar>
+            <ion-searchbar placeholder="HMOs, address, and health tips"></ion-searchbar>
           </div>
 
           <h2 class="top-health">Top 10 Health plans for you</h2>
@@ -417,7 +395,20 @@
                     </button>
                     <div class="save-btn">
                       <button>
-                        <i class="bi bi-heart"></i> <span>save</span>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="ionicon"
+                          viewBox="0 0 512 512"
+                        >
+                          <path
+                            d="M352.92 80C288 80 256 144 256 144s-32-64-96.92-64c-52.76 0-94.54 44.14-95.08 96.81-1.1 109.33 86.73 187.08 183 252.42a16 16 0 0018 0c96.26-65.34 184.09-143.09 183-252.42-.54-52.67-42.32-96.81-95.08-96.81z"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="32"
+                          /></svg
+                        ><span>save</span>
                       </button>
                     </div>
                   </div>
@@ -432,10 +423,7 @@
                   <div class="top">
                     <div class="plan-block-one">
                       <div class="icon">
-                        <img
-                          src="../../public/assets/image/plan_type.png"
-                          alt=""
-                        />
+                        <img src="../../public/assets/image/plan_type.png" alt="" />
                       </div>
                       <div class="content">
                         <span class="label">Plan type</span>
@@ -444,10 +432,7 @@
                     </div>
                     <div class="plan-block-two">
                       <div class="icon">
-                        <img
-                          src="../../public/assets/image/surgery.png"
-                          alt=""
-                        />
+                        <img src="../../public/assets/image/surgery.png" alt="" />
                       </div>
                       <div class="content">
                         <span class="label">Surgery Coverage</span>
@@ -458,10 +443,7 @@
                   <div class="down">
                     <div class="plan-block-three">
                       <div class="icon">
-                        <img
-                          src="../../public/assets/image/ward_type.png"
-                          alt=""
-                        />
+                        <img src="../../public/assets/image/ward_type.png" alt="" />
                       </div>
                       <div class="content">
                         <span class="label">Ward type</span>
@@ -470,10 +452,7 @@
                     </div>
                     <div class="plan-block-four">
                       <div class="icon">
-                        <img
-                          src="../../public/assets/image/plan_cost.png"
-                          alt=""
-                        />
+                        <img src="../../public/assets/image/plan_cost.png" alt="" />
                       </div>
                       <div class="content">
                         <span class="label">Plan Cost</span>
@@ -503,9 +482,7 @@
                       <p>1459 + hospitals</p>
                     </button>
                     <div class="save-btn">
-                      <button>
-                        <i class="bi bi-heart"></i> <span>save</span>
-                      </button>
+                      <button><i class="bi bi-heart"></i> <span>save</span></button>
                     </div>
                   </div>
                 </div>
@@ -519,10 +496,7 @@
                   <div class="top">
                     <div class="plan-block-one">
                       <div class="icon">
-                        <img
-                          src="../../public/assets/image/plan_type.png"
-                          alt=""
-                        />
+                        <img src="../../public/assets/image/plan_type.png" alt="" />
                       </div>
                       <div class="content">
                         <span class="label">Plan type</span>
@@ -531,10 +505,7 @@
                     </div>
                     <div class="plan-block-two">
                       <div class="icon">
-                        <img
-                          src="../../public/assets/image/surgery.png"
-                          alt=""
-                        />
+                        <img src="../../public/assets/image/surgery.png" alt="" />
                       </div>
                       <div class="content">
                         <span class="label">Surgery Coverage</span>
@@ -545,10 +516,7 @@
                   <div class="down">
                     <div class="plan-block-three">
                       <div class="icon">
-                        <img
-                          src="../../public/assets/image/ward_type.png"
-                          alt=""
-                        />
+                        <img src="../../public/assets/image/ward_type.png" alt="" />
                       </div>
                       <div class="content">
                         <span class="label">Ward type</span>
@@ -557,10 +525,7 @@
                     </div>
                     <div class="plan-block-four">
                       <div class="icon">
-                        <img
-                          src="../../public/assets/image/plan_cost.png"
-                          alt=""
-                        />
+                        <img src="../../public/assets/image/plan_cost.png" alt="" />
                       </div>
                       <div class="content">
                         <span class="label">Plan Cost</span>
@@ -941,7 +906,7 @@ ion-searchbar {
   line-height: 16.2px;
 }
 .save-btn > button > span {
-  margin-left: 4px;
+  /* margin-left: 4px; */
 }
 .header h2,
 .header p {
